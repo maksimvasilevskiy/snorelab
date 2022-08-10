@@ -1,0 +1,114 @@
+.home-reviews {
+	&__wrapper {
+		padding: 130px 0;
+		padding-bottom: 170px;
+		background: linear-gradient(360deg, $black-bg 0px, rgba($white, 0) 80px, rgba($white, 0) 85%, $black-bg 100%),
+			image('starry-sky-2.png');
+		background-repeat: no-repeat;
+		background-position: center;
+		text-align: center;
+	}
+	&__pagination {
+		@include flex(row, center, center);
+		& .swiper-pagination-bullet {
+			width: 8px;
+			height: 8px;
+			border-radius: 50%;
+			background: $gray-600;
+			&-active {
+				width: 12px;
+				height: 12px;
+				background: $white;
+			}
+		}
+		&-wrapper {
+			text-align: center;
+			margin-top: 38px;
+		}
+	}
+	&__title {
+		margin-bottom: 80px;
+		display: inline-block;
+	}
+	&__item {
+		padding: 1px;
+		border-radius: 10px;
+		background: linear-gradient(109.67deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0) 63.17%);
+		&-wrapper {
+			padding: 25px 50px;
+			text-align: left;
+			background: linear-gradient(rgba($white, 0.05)), linear-gradient($black-bg);
+			border-radius: 10px;
+			@include flex(column);
+			min-height: 290px;
+			& p {
+				margin: 0;
+				margin-bottom: 15px;
+				font-size: 1.8rem;
+				line-height: calc(25 / 18);
+			}
+		}
+		&-title {
+			margin-top: auto;
+			@include flex(row, center);
+			gap: 15px;
+			& h5 {
+				margin: 0;
+				font-weight: 600;
+				color: $gray-500;
+				font-size: 1.8rem;
+				line-height: calc(25 / 18);
+			}
+		}
+	}
+	&__stars {
+		margin-bottom: 12px;
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.home-reviews {
+		&__wrapper {
+			padding-top: 50px;
+			padding-bottom: 25px;
+		}
+		&__pagination {
+			&-wrapper {
+				margin-top: 34px;
+			}
+		}
+		&__title {
+			margin-bottom: 25px;
+		}
+		&__stars {
+			margin-bottom: 7px;
+			& svg {
+				max-width: 19px;
+			}
+		}
+		&__item {
+			&-wrapper {
+				padding: 25px;
+				& p {
+					font-size: 1.6rem;
+					line-height: calc(20 / 16);
+				}
+			}
+			&-title h5 {
+				font-size: 1.6rem;
+				line-height: calc(20 / 16);
+				font-weight: 400;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.home-reviews {
+		&__item {
+			&-wrapper {
+				min-height: 400px;
+			}
+		}
+	}
+}

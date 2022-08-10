@@ -1,0 +1,18 @@
+.link,
+.logo {
+	&:hover,
+	&:focus {
+		opacity: 0.8;
+	}
+}
+
+.logo {
+	display: inline-block;
+}
+
+.app {
+	&-wrapper {
+		overflow: hidden;
+		background: $black-bg;
+	}
+}

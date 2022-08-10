@@ -1,0 +1,174 @@
+.accordion {
+	margin-top: 100px;
+	&:first-child {
+		margin-top: 0;
+	}
+	&-title {
+		margin-bottom: 60px;
+	}
+	&-list {
+		&__item {
+			margin-bottom: 25px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+	&-btn {
+		color: $gray-500;
+		@include font(3.5rem, calc(45 / 35));
+		font-weight: 700;
+		padding-right: 34px;
+		padding-bottom: 30px;
+		width: 100%;
+		text-align: left;
+		position: relative;
+		border-bottom: 1px solid $blue-350;
+		&::after {
+			content: '';
+			position: absolute;
+			width: 30px;
+			height: 30px;
+			background: icon('right.svg') no-repeat 50% / cover;
+			right: 10px;
+			top: 10px;
+			transform: rotate(90deg);
+			pointer-events: none;
+		}
+		&_open {
+			margin-bottom: 20px;
+			border: none;
+			&::after {
+				transform: rotate(-90deg);
+			}
+			& + .accordion-content__wrapper {
+				display: block;
+				padding-bottom: 50px;
+				border-bottom: 1px solid $blue-350;
+			}
+		}
+	}
+	&-content {
+		padding: 0;
+		&__wrapper {
+			display: none;
+			& img {
+				margin: 0 auto;
+				margin-bottom: 50px;
+				border-radius: 15px;
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+		& .accordion-content {
+			&__list {
+				margin-bottom: 10px;
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+			&__item {
+				@include font(2.8rem, calc(45 / 28));
+				letter-spacing: -0.02em;
+				color: $gray-700;
+				padding-left: 31px;
+				position: relative;
+				&::before {
+					content: '';
+					font-size: inherit;
+					position: absolute;
+					left: 0;
+					top: 0;
+					width: 26px;
+					height: 1.607em;
+					background: icon('list-item-ellipse.svg') no-repeat 50%;
+				}
+			}
+		}
+		& a {
+			color: $lightblue-350;
+			display: inline;
+			border-bottom: 1px solid $lightblue-350;
+		}
+		& p {
+			margin: 0;
+			margin-bottom: 10px;
+			@include font(2.8rem, calc(45 / 28));
+			letter-spacing: -0.02em;
+			color: $gray-700;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.accordion {
+		margin-top: 50px;
+		&:first-child {
+			margin-top: 0;
+		}
+		&-title {
+			margin-bottom: 30px;
+		}
+		&-btn {
+			@include font(2rem, calc(30 / 20));
+			color: $white;
+			&::after {
+				width: 20px;
+				height: 20px;
+				top: 9px;
+			}
+			&_open {
+				padding-bottom: 20px;
+				margin-bottom: 0;
+				& + .accordion-content {
+					border: none;
+					padding-bottom: 5px;
+				}
+			}
+		}
+		&-content {
+			& p {
+				@include font(1.6rem, calc(25 / 16));
+				margin-bottom: 0;
+			}
+			& img {
+				border-radius: 10px;
+				margin: 20px 0;
+				&:first-child {
+					margin-top: 0;
+				}
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+			& .accordion-content {
+				&__list {
+					margin: 5px 0;
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}
+				&__item {
+					@include font(1.6rem, calc(25 / 16));
+					letter-spacing: 0;
+					padding-left: 18px;
+					position: relative;
+					&::before {
+						content: '';
+						font-size: inherit;
+						position: absolute;
+						left: 2px;
+						top: 7px;
+						width: 8px;
+						height: 8px;
+						background: icon('list-item-ellipse.svg') no-repeat 50% / cover;
+					}
+				}
+			}
+		}
+	}
+}

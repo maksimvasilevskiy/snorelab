@@ -1,0 +1,370 @@
+.careers {
+	&-page {
+		&__wrapper {
+			padding: 100px 0;
+			padding-bottom: 147px;
+		}
+		&__title {
+			margin-bottom: 30px;
+		}
+		&__subtitle {
+			max-width: 890px;
+			margin-bottom: 55px;
+			& p {
+				@include font(2.8rem, calc(45 / 28));
+				letter-spacing: -0.02em;
+				color: $lightblue-text;
+				margin: 0;
+			}
+		}
+		&__info {
+			max-width: 890px;
+			& p {
+				margin: 0;
+				@include font(2.8rem, calc(45 / 28));
+				letter-spacing: -0.02em;
+				color: $gray-700;
+			}
+		}
+		&__jobs {
+			&-title {
+				display: block;
+				margin-bottom: 20px;
+				@include font(2.8rem, calc(45 / 28));
+				letter-spacing: -0.02em;
+				color: $gray-700;
+			}
+			&-item {
+				@include font(3.5rem, calc(45 / 35));
+				font-weight: 700;
+				color: $gray-500;
+				padding-left: 31px;
+				position: relative;
+				margin-bottom: 10px;
+				&:last-child {
+					margin-bottom: 0;
+				}
+				&::before {
+					content: '';
+					font-size: inherit;
+					position: absolute;
+					left: 0;
+					top: 4px;
+					width: 26px;
+					height: 1em;
+					background: icon('list-item-ellipse.svg') no-repeat 50%;
+				}
+			}
+		}
+	}
+	&-form {
+		max-width: 890px;
+		padding-top: 100px;
+		&__cancel {
+			margin-right: 20px;
+			min-width: 223px;
+		}
+		&__field {
+			position: relative;
+			margin-top: 30px;
+			&:first-child {
+				margin-top: 0;
+			}
+			&-title {
+				margin: 0;
+				margin-bottom: 10px;
+				display: inline-block;
+				@include font(1.6rem, calc(20 / 16));
+				text-transform: uppercase;
+				letter-spacing: 0.13em;
+				font-weight: 600;
+			}
+		}
+		&__upload {
+			width: 100%;
+			border-radius: 10px;
+			min-height: 55px;
+			@include font(1.8rem, calc(25 / 18));
+			color: $gray-600;
+			padding: 15px 20px;
+			background: linear-gradient(rgba(255, 255, 255, 0.06)), linear-gradient(#020f1e);
+			position: relative;
+			&::after {
+				content: '';
+				position: absolute;
+				top: 50%;
+				right: 20px;
+				transform: translateY(-50%);
+				width: 24px;
+				height: 24px;
+				background: icon('upload.svg') no-repeat 50% / cover;
+			}
+			&:active,
+			&:focus {
+				background: linear-gradient(rgba(255, 255, 255, 0.1)), linear-gradient(#020f1e);
+			}
+			&-btn {
+				width: 30px;
+				height: 20px;
+				position: relative;
+				&-wrapper {
+					position: absolute;
+					top: 50%;
+					right: 17px;
+					transform: translateY(-50%);
+					display: flex;
+				}
+				& span {
+					width: 14px;
+					height: 2px;
+					border-radius: 8px;
+					background: $white;
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					&:first-child {
+						transform: translateX(-50%) rotate(45deg);
+					}
+					&:last-child {
+						transform: translateX(-50%) rotate(-45deg);
+					}
+				}
+			}
+			&-wrapper {
+				width: 100%;
+			}
+			&_loaded {
+				background: linear-gradient(#002e4d);
+				&::after {
+					content: none;
+				}
+			}
+		}
+		&__input {
+			display: block;
+			width: 100%;
+			border-radius: 10px;
+			background: linear-gradient(rgba(255, 255, 255, 0.06)), linear-gradient(#020f1e);
+			@include font(1.8rem, calc(25 / 18));
+			color: $gray-600;
+			padding: 15px 20px;
+			position: relative;
+			&:active,
+			&:focus {
+				background: linear-gradient(rgba(255, 255, 255, 0.1)), linear-gradient(#020f1e);
+			}
+			&[type='file'] {
+				display: none;
+			}
+			&-border {
+				display: flex;
+				width: 100%;
+				border-radius: 10px;
+				padding: 1px;
+				background: linear-gradient(rgba(255, 255, 255, 0.06)), linear-gradient(#020f1e);
+			}
+			&-error {
+				position: relative;
+				margin-bottom: 55px;
+				&::after {
+					top: calc(100% + 5px);
+					left: 0;
+					position: absolute;
+					padding-left: 20px;
+					@include font(1.8rem, calc(25 / 18));
+					color: $red-300;
+					content: attr(data-error);
+				}
+			}
+		}
+		&__textarea {
+			width: 100%;
+			height: 100%;
+			min-height: 237px;
+			border-radius: 10px;
+			background: linear-gradient(rgba(255, 255, 255, 0.06)), linear-gradient(#020f1e);
+			@include font(1.8rem, calc(25 / 18));
+			color: $gray-600;
+			padding: 15px 20px;
+			&:active,
+			&:focus {
+				background: linear-gradient(rgba(255, 255, 255, 0.1)), linear-gradient(#020f1e);
+			}
+		}
+		&__submit {
+			@include font(2.4rem, calc(30 / 24));
+			font-weight: 700;
+			background: $lightblue-350;
+			color: $white;
+			padding: 0.625em 1.25em;
+			border-radius: 10px;
+			&-wrapper {
+				padding-top: 80px;
+			}
+		}
+		&__modal {
+			border-radius: 20px;
+			padding: 66px 30px;
+			padding-top: 71px;
+			text-align: center;
+			&-wrapper {
+				position: fixed;
+				top: 50%;
+				left: 50%;
+				transform: translateX(-50%) translateY(-50%);
+				background: rgba($white, 0.1);
+				border-radius: 20px;
+				backdrop-filter: blur(35px);
+				max-width: 440px;
+				width: 100%;
+				display: none;
+				z-index: 100;
+			}
+			&_open {
+				display: block;
+			}
+			&-title {
+				@include font(3.5rem, calc(45 / 35));
+				margin-bottom: 10px;
+			}
+			&-img {
+				min-height: 166px;
+				margin: 0 auto;
+				margin-bottom: 12px;
+			}
+			&-close {
+				position: relative;
+				width: 32px;
+				height: 32px;
+				&-wrapper {
+					position: absolute;
+					top: 20px;
+					right: 20px;
+					display: flex;
+				}
+				& span {
+					width: 20px;
+					height: 1px;
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					background: $lightblue-text;
+					&:first-child {
+						transform: translateX(-50%) rotate(45deg);
+					}
+					&:last-child {
+						transform: translateX(-50%) rotate(-45deg);
+					}
+				}
+			}
+			& p {
+				margin: 0;
+				@include font(2.4rem, calc(30 / 24));
+				color: $gray-600;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.careers {
+		&-page {
+			&__wrapper {
+				padding-bottom: 60px;
+			}
+			&__title {
+				margin-bottom: 22px;
+			}
+			&__subtitle {
+				margin-bottom: 40px;
+				& p {
+					@include font(1.6rem, calc(20 / 16));
+					letter-spacing: 0;
+				}
+			}
+			&__info {
+				& p {
+					@include font(1.6rem, calc(25 / 16));
+					letter-spacing: 0;
+				}
+			}
+			&__jobs {
+				&-title {
+					margin-bottom: 30px;
+					@include font(1.6rem, calc(25 / 16));
+					letter-spacing: 0;
+				}
+				&-item {
+					@include font(1.8rem, calc(25 / 18));
+					letter-spacing: 0.01em;
+					padding-left: 19px;
+					color: $white;
+					&::before {
+						content: '';
+						font-size: inherit;
+						position: absolute;
+						left: 0;
+						top: 7px;
+						width: 8px;
+						height: 8px;
+						background: icon('list-item-ellipse.svg') no-repeat 50% / cover;
+					}
+				}
+			}
+		}
+		&-form {
+			padding-top: 60px;
+			&__field {
+				margin-top: 20px;
+				&:first-child {
+					margin-top: 0;
+				}
+			}
+			&__submit {
+				&-wrapper {
+					padding-top: 60px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.careers {
+		&-form {
+			&__submit {
+				width: 100%;
+			}
+			&__input {
+				&-error {
+					margin-bottom: 67px;
+				}
+			}
+			&__modal {
+				padding: 46px 20px;
+				padding-top: 48px;
+				&-title {
+					@include font(2.4rem, calc(30 / 24));
+					margin-bottom: 8px;
+				}
+				&-wrapper {
+					max-width: 300px;
+					backdrop-filter: blur(24px);
+				}
+				&-img {
+					min-height: auto;
+					margin-bottom: 6px;
+				}
+				&-close {
+					&-wrapper {
+						top: 14px;
+						right: 14px;
+					}
+				}
+				& p {
+					@include font(1.6rem, calc(20 / 16));
+				}
+			}
+		}
+	}
+}

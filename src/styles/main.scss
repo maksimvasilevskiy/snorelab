@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+/*!
+ * Bootstrap Grid v4.5.3 (https://getbootstrap.com/)
+ * Copyright 2011-2020 The Bootstrap Authors
+ * Copyright 2011-2020 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+ */
+
+html {
+	box-sizing: border-box;
+	-ms-overflow-style: scrollbar;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+@import 'grid/functions', 'grid/variables';
+
+@import 'grid/mixins/breakpoints', 'grid/mixins/grid-framework', 'grid/mixins/grid';
+
+@import 'grid/grid', 'grid/utilities/display', 'grid/utilities/flex', 'grid/utilities/spacing';
+
+// 1. Configuration and helpers
+@import 'abstracts/variables', 'abstracts/functions', 'abstracts/mixins';
+
+// 2. Vendors
+@import 'vendors/normalize';
+
+// 3. Base stuff
+@import 'base/base', 'base/fonts', 'base/typography', 'base/helpers';
+
+//4. Components
+@import 'components/title', 'components/button', 'components/star';
+
+// 5. Layout-related sections
+@import 'layout/header', 'layout/footer';
+
+// 6. Components
+@import 'components/m-menu', 'components/home-main', 'components/description', 'components/home-reviews',
+	'components/home-partner', 'components/home-insights', 'components/how-works', 'components/example',
+	'components/insights-feautured', 'components/tabs', 'components/insights-articles', 'components/insights-assess',
+	'components/insight-main', 'components/insight-section', 'components/insight-download', 'components/references',
+	'components/share', 'components/insights-relative', 'components/questionnaire', 'components/accordion',
+	'components/shop-main', 'components/product-type', 'components/shop-content', 'components/products',
+	'components/product', 'components/discount', 'components/product-note';
+
+// 7. Page-specific styles
+@import 'pages/home', 'pages/reviews', 'pages/insights.scss', 'pages/insight', 'pages/faq', 'pages/contact',
+	'pages/about', 'pages/text', 'pages/careers', 'pages/shop', 'pages/product';
+
+// 8. Themes
+@import 'themes/default', 'themes/media';

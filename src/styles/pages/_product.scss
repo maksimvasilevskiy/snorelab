@@ -1,0 +1,9 @@
+.product-page {
+	background: $lightgray-100;
+}
+
+@media screen and (max-width: 991px) {
+	.product-page {
+		padding-top: 70px;
+	}
+}

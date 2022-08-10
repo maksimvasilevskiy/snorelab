@@ -1,0 +1,26 @@
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 20C0 8.95431 8.95431 0 20 0V0C31.0457 0 40 8.95431 40 20V20C40 31.0457 31.0457 40 20 40V40C8.95431 40 0 31.0457 0 20V20Z" fill="#E6E6E6"/>
+<circle cx="15.4572" cy="18.7873" r="0.585112" fill="#020F1E"/>
+<circle cx="16.6271" cy="16.9142" r="0.585112" fill="#020F1E"/>
+<circle cx="18.2648" cy="15.7443" r="0.585112" fill="#020F1E"/>
+<circle cx="20.1378" cy="15.0421" r="0.585112" fill="#020F1E"/>
+<circle cx="22.0099" cy="15.0421" r="0.585112" fill="#020F1E"/>
+<circle cx="23.883" cy="15.7443" r="0.585112" fill="#020F1E"/>
+<circle cx="25.5207" cy="16.9142" r="0.585112" fill="#020F1E"/>
+<circle cx="26.925" cy="18.7873" r="0.585112" fill="#020F1E"/>
+<circle cx="25.9894" cy="14.5734" r="0.585112" fill="#020F1E"/>
+<circle cx="27.3918" cy="15.9787" r="0.585112" fill="#020F1E"/>
+<circle cx="28.5627" cy="17.8507" r="0.585112" fill="#020F1E"/>
+<circle cx="13.3507" cy="17.6164" r="0.585112" fill="#020F1E"/>
+<circle cx="14.5216" cy="15.7443" r="0.585112" fill="#020F1E"/>
+<circle cx="16.1593" cy="14.34" r="0.585112" fill="#020F1E"/>
+<circle cx="18.0324" cy="13.4035" r="0.585112" fill="#020F1E"/>
+<circle cx="19.9035" cy="12.9357" r="0.585112" fill="#020F1E"/>
+<circle cx="22.2433" cy="12.9357" r="0.585112" fill="#020F1E"/>
+<circle cx="24.1164" cy="13.4035" r="0.585112" fill="#020F1E"/>
+<circle cx="21.0737" cy="25.1059" r="1.52129" stroke="#020F1E" stroke-width="0.46809"/>
+<path d="M25.6387 27.9146H16.6279C16.6279 27.9146 16.6254 17.1063 21.1918 17.1486C25.7405 17.1906 25.6387 27.9146 25.6387 27.9146Z" stroke="#020F1E" stroke-width="0.46809"/>
+<line x1="18.8493" y1="22.18" x2="23.2961" y2="22.18" stroke="#020F1E" stroke-width="0.46809" stroke-linecap="round"/>
+<line x1="19.7868" y1="20.5423" x2="22.5953" y2="20.5423" stroke="#020F1E" stroke-width="0.46809" stroke-linecap="round"/>
+<line x1="20.7223" y1="18.9037" x2="21.6585" y2="18.9037" stroke="#020F1E" stroke-width="0.46809" stroke-linecap="round"/>
+</svg>

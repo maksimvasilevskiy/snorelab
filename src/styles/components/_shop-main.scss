@@ -1,0 +1,77 @@
+.shop-main {
+	&__wrapper {
+		padding: 105px 0;
+		padding-bottom: 120px;
+	}
+	&__content {
+		text-align: center;
+	}
+	&__title {
+		margin-bottom: 30px;
+		max-width: 950px;
+		text-align: center;
+	}
+	&__note {
+		& p {
+			@include font(2.4rem, calc(40 / 24));
+			color: $black-200;
+			margin: 0;
+		}
+	}
+	&-btn {
+		background: linear-gradient(268.94deg, #8faeea 29.66%, #1d66a7 104.91%);
+		border-radius: 11px;
+		@include flex();
+		max-width: 157px;
+		padding: 8px 10px;
+		padding-bottom: 3px;
+		margin: 0 auto;
+		margin-bottom: 28px;
+		& svg {
+			margin-right: 6px;
+			max-width: 28px;
+		}
+		&__text {
+			color: $white;
+			& .title {
+				@include font(2rem, calc(21 / 20));
+				letter-spacing: 0.02em;
+			}
+			& p {
+				margin: 0;
+				@include font(1.1rem, calc(14 / 11));
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.shop-main {
+		&-btn {
+			margin-bottom: 15px;
+			margin-left: 0;
+		}
+		&__wrapper {
+			padding-top: 100px;
+			padding-bottom: 38px;
+			border-bottom: 1px solid $gray-500;
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.shop-main {
+		&__title {
+			text-align: left;
+			margin-bottom: 12px;
+		}
+		&__content {
+			text-align: left;
+		}
+		&__note {
+			& p {
+				@include font(1.6rem, calc(20 / 16));
+			}
+		}
+	}
+}

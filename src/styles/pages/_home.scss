@@ -1,0 +1,55 @@
+.home {
+	position: relative;
+	& svg:nth-last-child(2)[data-svg='home-decorative'] {
+		position: absolute;
+		filter: blur(180px);
+		pointer-events: none;
+		transform: rotate(-19deg);
+		bottom: -520px;
+		left: 0;
+		transform: translateX(-280px);
+	}
+	& svg:last-child[data-svg='home-decorative'] {
+		position: absolute;
+		pointer-events: none;
+		filter: blur(200px);
+		transform: rotate(-19deg);
+		bottom: -600px;
+		right: 0;
+		transform: translateX(370px);
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.home {
+		& svg:last-child[data-svg='home-decorative'] {
+			display: none;
+		}
+		& svg:nth-last-child(2)[data-svg='home-decorative'] {
+			bottom: -350px;
+			filter: blur(140px);
+			width: 600px;
+			height: 600px;
+			transform: translateX(-150px);
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.home {
+		& svg:nth-last-child(2)[data-svg='home-decorative'] {
+			bottom: -350px;
+			filter: blur(120px);
+			transform: translateX(-200px);
+		}
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.home {
+		& svg:nth-last-child(2)[data-svg='home-decorative'] {
+			left: 0;
+			transform: translateX(-40%);
+		}
+	}
+}

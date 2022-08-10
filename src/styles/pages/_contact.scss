@@ -1,0 +1,39 @@
+.contact {
+	&-page {
+		&__wrapper {
+			padding: 105px 0;
+		}
+		&__title {
+			margin-bottom: 40px;
+		}
+		&__content {
+			max-width: 750px;
+			& p {
+				@include font(2.4rem, calc(40 / 24));
+				color: $gray-560;
+				margin: 0;
+			}
+			& a {
+				color: $lightblue-350;
+				display: inline;
+				border-bottom: 1px solid $lightblue-350;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.contact {
+		&-page {
+			&__wrapper {
+				padding: 100px 0;
+				padding-bottom: 60px;
+			}
+			&__content {
+				& p {
+					@include font(1.6rem, calc(25 / 16));
+				}
+			}
+		}
+	}
+}

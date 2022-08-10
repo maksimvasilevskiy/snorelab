@@ -1,0 +1,12 @@
+.discount {
+	&-note {
+		position: absolute;
+		background: $lightblue-500;
+		padding: 3px 10px;
+		top: 20px;
+		left: 20px;
+		color: $white;
+		border-radius: 14px;
+		@include font(1rem, calc(15 / 10));
+	}
+}

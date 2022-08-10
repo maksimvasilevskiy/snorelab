@@ -1,0 +1,32 @@
+.product-type {
+	padding: 40px 0;
+	padding-bottom: 50px;
+	&__title {
+		@include font(2rem, calc(30 / 20));
+		color: $black-100;
+		margin-bottom: 22px;
+	}
+	&__sort {
+		&-item {
+			margin-bottom: 10px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+		&-btn {
+			text-transform: capitalize;
+			@include font(1.8rem, calc(25 / 18));
+			&_active {
+				opacity: 0.3;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.product-type {
+		&__title {
+			margin-bottom: 13px;
+		}
+	}
+}

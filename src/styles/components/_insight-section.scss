@@ -1,0 +1,27 @@
+.insight-section {
+	&__title {
+		font-size: 4rem;
+		line-height: 1;
+		margin-bottom: 50px;
+		&_s {
+			font-size: 3rem;
+			line-height: calc(40 / 30);
+			margin-bottom: 30px;
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.insight-section {
+		&__title {
+			margin-bottom: 20px;
+			font-size: 2rem;
+			line-height: calc(30 / 20);
+			&_s {
+				font-size: 2rem;
+				line-height: calc(30 / 20);
+				margin-bottom: 20px;
+			}
+		}
+	}
+}

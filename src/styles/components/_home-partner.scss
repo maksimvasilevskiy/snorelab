@@ -1,0 +1,198 @@
+.home-partner {
+	&__wrapper {
+		padding: 80px 0;
+		padding-bottom: 110px;
+		background-image: linear-gradient(180deg, rgba($white, 0) 10px, rgba($white, 0) 190px, $black-bg 360px),
+			image('starry-sky-2.png');
+		background-repeat: no-repeat;
+		background-position: 50% -20%;
+		position: relative;
+		& svg:last-child[data-svg='decorative'] {
+			pointer-events: none;
+			position: absolute;
+			width: 700px;
+			height: 700px;
+			filter: blur(180px);
+			bottom: 200px;
+			left: 0;
+			transform: translateX(calc(-50% + 200px));
+		}
+	}
+	&__info {
+		margin-bottom: 87px;
+		position: relative;
+		z-index: 1;
+		&-title {
+			margin-bottom: 65px;
+			color: $gray-500;
+		}
+		&-note {
+			& p {
+				margin: 0;
+				font-size: 2.4rem;
+				line-height: calc(30 / 24);
+			}
+		}
+	}
+	&__phones {
+		&-top {
+			position: relative;
+			& img {
+				position: relative;
+				z-index: 2;
+				transform: translateX(55px);
+			}
+			& svg {
+				z-index: 1;
+				position: absolute;
+				pointer-events: none;
+				filter: blur(200px);
+				top: 0;
+				right: 0;
+				transform: translateX(180px) translateY(-100px);
+			}
+		}
+		&-bottom {
+			@include flex();
+			justify-content: flex-end;
+			position: relative;
+			z-index: 2;
+			margin-top: 42px;
+			padding-right: 42px;
+		}
+	}
+	&__app {
+		@include flex(row, center);
+		gap: 30px;
+		margin-bottom: 17px;
+		&-title {
+			background: linear-gradient(90deg, #01bbe0 22.43%, #e3f9fe 85.68%);
+			-webkit-background-clip: text;
+		}
+		&-icon {
+			width: 90px;
+			height: 90px;
+			& svg {
+				border-radius: 20px;
+			}
+		}
+	}
+	&__item:nth-child(2n-1) {
+		align-self: flex-start;
+	}
+	&__item:nth-child(2n) {
+		align-self: flex-end;
+	}
+}
+
+@media screen and (max-width: 1220px) {
+	.home-partner {
+		&__wrapper {
+			& svg:last-child[data-svg='decorative'] {
+				width: 500px;
+				height: 500px;
+				filter: blur(160px);
+				bottom: 150px;
+			}
+		}
+		&__phones {
+			&-top {
+				& img {
+					max-width: 420px;
+				}
+				& svg {
+					width: 750px;
+					height: 750px;
+					transform: translateX(200px) translateY(-120px);
+				}
+			}
+			&-bottom {
+				padding-right: 0;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.home-partner {
+		&__wrapper {
+			padding-top: 85px;
+			padding-bottom: 40px;
+		}
+		&__info {
+			margin-bottom: 33px;
+			&-title {
+				margin-bottom: 30px;
+			}
+			&-note {
+				& p {
+					font-size: 1.6rem;
+					line-height: calc(20 / 16);
+				}
+			}
+		}
+		&__app {
+			gap: 17px;
+			&-icon,
+			&-icon svg {
+				width: 70px;
+				height: 70px;
+			}
+		}
+		&__phones {
+			margin-bottom: 66px;
+			&-top {
+				& img {
+					width: 100%;
+					position: relative;
+					left: 50%;
+					transform: translateX(-50%);
+				}
+				& svg {
+					width: 600px;
+					height: 600px;
+					filter: blur(170px);
+					top: -100px;
+					right: 50%;
+					transform: translateX(50%);
+				}
+			}
+			&-bottom {
+				margin-top: 26px;
+				justify-content: center;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.home-partner {
+		&__wrapper {
+			& svg:last-child[data-svg='decorative'] {
+				width: 300px;
+				height: 300px;
+				filter: blur(110px);
+				bottom: 100px;
+				transform: translateX(calc(-50% + 150px));
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.home-partner {
+		&__phones {
+			&-top {
+				& svg {
+					width: 450px;
+					height: 450px;
+					filter: blur(160px);
+					top: -80px;
+				}
+			}
+			&-bottom {
+				gap: 10px;
+			}
+		}
+	}
+}

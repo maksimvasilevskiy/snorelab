@@ -1,0 +1,31 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+// Base
+$font: 'ProximaNova', Arial, sans-serif;
+$base-font-size: 16px;
+$base-path: '../';
+
+// Colors
+$white: #fff;
+$lightgray-100: #fafafa;
+$gray-600: #ccc;
+$gray-560: #e6e6e6;
+$gray-500: #e5e5e5;
+$gray-700: #b2b2b2;
+$gray-800: #b3b3b3;
+
+$black: #000;
+$black-100: #1a1a1a;
+$black-200: #1a222a;
+$black-bg: #020f1e;
+$lightblue-200: #2da6dd;
+$lightblue-350: #17a2ff;
+$lightblue-500: #5da6f9;
+$lightblue-text: #a6d2f2;
+$blue-650: #035a95;
+$blue-350: #0d3959;
+$red-300: #ea384c;
+
+$title-gradient-blue: linear-gradient(268.94deg, #8faeea 29.66%, #1d66a7 104.91%);

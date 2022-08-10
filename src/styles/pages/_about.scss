@@ -1,0 +1,63 @@
+.about {
+	&-page {
+		&__wrapper {
+			padding: 100px 0;
+			padding-bottom: 144px;
+		}
+		&__title {
+			margin-bottom: 30px;
+		}
+		&__note {
+			margin-bottom: 50px;
+			max-width: 890px;
+			@include font(2.8rem, calc(45 / 28));
+			color: $lightblue-text;
+			& p {
+				margin: 0;
+				letter-spacing: -0.02em;
+			}
+		}
+		&__content {
+			@include font(2.8rem, calc(45 / 28));
+			color: $gray-700;
+			max-width: 890px;
+			& p {
+				margin: 0;
+				margin-bottom: 10px;
+				letter-spacing: -0.02em;
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.about {
+		&-page {
+			&__wrapper {
+				padding-bottom: 60px;
+			}
+			&__title {
+				margin-bottom: 22px;
+			}
+			&__note {
+				max-width: 550px;
+				margin-bottom: 40px;
+				@include font(1.6rem, calc(20 / 16));
+				& p {
+					letter-spacing: 0;
+				}
+			}
+			&__content {
+				max-width: 590px;
+				@include font(1.6rem, calc(25 / 16));
+				& p {
+					letter-spacing: 0;
+					margin: 0;
+				}
+			}
+		}
+	}
+}

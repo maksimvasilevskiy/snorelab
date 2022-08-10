@@ -1,0 +1,206 @@
+.home-main {
+	&__wrapper {
+		padding-bottom: 150px;
+	}
+	&__phones {
+		& img,
+		svg {
+			pointer-events: none;
+		}
+		& img:first-child {
+			max-width: 417px;
+			margin-top: 242px;
+			position: relative;
+			z-index: 5;
+		}
+		& img:nth-child(2) {
+			position: absolute;
+			max-width: 334px;
+			z-index: 3;
+			transform: rotate(15.06deg);
+			top: -30px;
+			right: 34px;
+		}
+		& svg {
+			z-index: 0;
+			position: absolute;
+			top: -50px;
+			right: -325px;
+			transform: rotate(-18.74deg);
+			filter: blur(448px);
+		}
+	}
+	&__info {
+		padding-top: 120px;
+		&-icon {
+			margin-bottom: 32px;
+			max-width: 90px;
+		}
+		& p {
+			margin: 0;
+			margin-bottom: 52px;
+			font-size: 2.4rem;
+			line-height: calc(30 / 24);
+		}
+		&-app {
+			display: inline-block;
+			border: 1px solid $white;
+			padding: 13px 25px;
+			padding-bottom: 10px;
+			border-radius: 10px;
+			margin-right: 10px;
+			& svg:first-child {
+				margin-right: 10px;
+			}
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+	&__title {
+		margin-bottom: 26px;
+	}
+}
+
+@media screen and (max-width: 1220px) {
+	.home-main {
+		&__info {
+			&-app {
+				margin-bottom: 10px;
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+		&__phones {
+			& img:first-child {
+				max-width: 350px;
+				margin-top: 220px;
+			}
+			& img:nth-child(2) {
+				max-width: 280px;
+				top: -20px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.home-main {
+		&__wrapper {
+			background: image('starry-sky-1.png') no-repeat top;
+		}
+		&__info {
+			padding-top: 105px;
+			margin-bottom: 55px;
+			&-icon {
+				max-width: 50px;
+				margin-bottom: 14px;
+			}
+			& p {
+				font-size: 1.6rem;
+				line-height: calc(20 / 16);
+				max-width: 500px;
+				margin-bottom: 23px;
+			}
+			&-apps {
+				@include flex();
+			}
+			&-app {
+				border-radius: 8px;
+				@include flex(row, center);
+				max-height: 44px;
+				margin-bottom: 0;
+				padding: 9px 25px;
+				& svg:first-child {
+					max-height: 25px;
+				}
+				& svg:nth-child(2) {
+					max-width: 80px;
+				}
+			}
+		}
+		&__phones {
+			& img:first-child {
+				margin-top: 180px;
+				margin-left: 70px;
+			}
+			& img:nth-child(2) {
+				max-width: 280px;
+				top: 0;
+				right: 100px;
+			}
+			& svg {
+				top: 0;
+				right: -230px;
+				filter: blur(188px);
+			}
+		}
+		&__title {
+			width: 100%;
+			max-width: 328px;
+			margin-bottom: 20px;
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.home-main {
+		&__wrapper {
+			padding-bottom: 50px;
+		}
+		&__phones {
+			& img:first-child {
+				margin-top: 115px;
+				margin-left: 40px;
+				max-width: 259px;
+			}
+			& img:nth-child(2) {
+				max-width: 200px;
+				right: 80px;
+			}
+			& svg {
+				top: 70px;
+				right: -100px;
+				width: 850px;
+				height: 800px;
+				filter: blur(188px);
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.home-main {
+		&__info {
+			&-apps {
+				gap: 10px;
+			}
+			&-app {
+				margin: 0;
+				width: calc(50% - 5px);
+				justify-content: center;
+			}
+		}
+		&__phones {
+			& img:first-child {
+				max-width: 179px;
+				margin-left: 50%;
+				transform: translateX(calc(-50% - 50px));
+			}
+			& img:nth-child(2) {
+				max-width: 147px;
+				right: 50%;
+				transform: translateX(calc(50% + 50px)) rotate(15.06deg);
+			}
+			& svg {
+				top: 30px;
+				right: 50%;
+				transform: translateX(50%);
+				width: 450px;
+				height: 400px;
+				filter: blur(80px);
+			}
+		}
+	}
+}
